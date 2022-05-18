@@ -1,0 +1,2206 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>scidap-satellite documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">scidap-satellite documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li >AppService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app.service.ts</code>
+        </p>
+
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_apiSyncConnection" >_apiSyncConnection</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_apiSyncService" >_apiSyncService</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_connected" >_connected</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_machines" >_machines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_runningServices" >_runningServices</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_savedMessages" >_savedMessages</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_streamQueue$" >_streamQueue$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_streamResponses" >_streamResponses</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_taskMonitors" >_taskMonitors</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_tempFolder" >_tempFolder</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_trees" >_trees</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keepAlivePingTimer" >keepAlivePingTimer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#keepAliveTimer" >keepAliveTimer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#namespace" >namespace</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#satelliteId" >satelliteId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#_checkPm2List" >_checkPm2List</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#_closeStream" >_closeStream</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_createStateMachines" >_createStateMachines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#_initialStateMachines" >_initialStateMachines</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_setupStream" >_setupStream</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_startConnection" >_startConnection</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#handleMessage" >handleMessage</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#onModuleInit" >onModuleInit</a>
+                            </li>
+                            <li>
+                                <a href="#runKeepAliveTimer" >runKeepAliveTimer</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#sendToAPISync" >sendToAPISync</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#machines" >machines</a>
+                                </li>
+                                <li>
+                                    <a href="#trees" >trees</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(client: ClientGrpc, authService: <a href="../injectables/AuthService.html" target="_self">AuthService</a>, _configService: ConfigService, stateMachineService: <a href="../injectables/StateMachinesService.html" target="_self">StateMachinesService</a>, _treeService: <a href="../injectables/TreeService.html" target="_self">TreeService</a>, _taskService: <a href="../injectables/TaskService.html" target="_self">TaskService</a>, _commandService: <a href="../injectables/CommandService.html" target="_self">CommandService</a>, _pm2Service: <a href="../injectables/Pm2Service.html" target="_self">Pm2Service</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app.service.ts:89</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>client</td>
+                                                  
+                                                        <td>
+                                                                    <code>ClientGrpc</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>authService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_configService</td>
+                                                  
+                                                        <td>
+                                                                    <code>ConfigService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>stateMachineService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/StateMachinesService.html" target="_self" >StateMachinesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_treeService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TreeService.html" target="_self" >TreeService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_taskService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TaskService.html" target="_self" >TaskService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_commandService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CommandService.html" target="_self" >CommandService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_pm2Service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/Pm2Service.html" target="_self" >Pm2Service</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_checkPm2List"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>_checkPm2List</b></span>
+                        <a href="#_checkPm2List"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_checkPm2List()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="193"
+                            class="link-to-prism">src/app.service.ts:193</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks PM2 list periodically for any services that are errored or stopped</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_closeStream"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>_closeStream</b></span>
+                        <a href="#_closeStream"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_closeStream(folderName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, pmId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, task: <a href="../interfaces/SatelliteTask.html" target="_self">SatelliteTask</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="601"
+                            class="link-to-prism">src/app.service.ts:601</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>folderName</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>pmId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>task</td>
+                                    <td>
+                                                <code><a href="../interfaces/SatelliteTask.html" target="_self" >SatelliteTask</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_createStateMachines"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>_createStateMachines</b></span>
+                        <a href="#_createStateMachines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_createStateMachines(tree: <a href="../interfaces/ProcessedTree.html" target="_self">ProcessedTree</a>, child)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="542"
+                            class="link-to-prism">src/app.service.ts:542</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Generates a FSM for current tree node and all children recursively</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Default value</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tree</td>
+                                    <td>
+                                                <code><a href="../interfaces/ProcessedTree.html" target="_self" >ProcessedTree</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        <p>A Tree from API-Sync</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>child</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+                                    <td>
+                                        <code>false</code>
+                                    </td>
+
+                                    <td>
+                                        <p>False if Root Node</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#ServiceMachine" target="_self" >ServiceMachine</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A Finite State Machine</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_initialStateMachines"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>_initialStateMachines</b></span>
+                        <a href="#_initialStateMachines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_initialStateMachines(tree: <a href="../interfaces/ProcessedTree.html" target="_self">ProcessedTree</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="465"
+                            class="link-to-prism">src/app.service.ts:465</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Build and start the Root node of a Dependency Tree</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>tree</td>
+                                    <td>
+                                                <code><a href="../interfaces/ProcessedTree.html" target="_self" >ProcessedTree</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Root Tree from API-Sync</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>boolean based on succes starting</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_setupStream"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>_setupStream</b></span>
+                        <a href="#_setupStream"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_setupStream()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="581"
+                            class="link-to-prism">src/app.service.ts:581</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>literal type</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_startConnection"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span ><b>_startConnection</b></span>
+                        <a href="#_startConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>_startConnection()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">src/app.service.ts:269</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Opens the connection to API-Sync and embeds Satellite token into metadata
+ Also responsible for setting up subscription that handles trees and tasks</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleMessage"></a>
+                    <span class="name">
+                        <span class="modifier">Private</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>handleMessage</b></span>
+                        <a href="#handleMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>handleMessage(message: <a href="../interfaces/APISyncMessage.html" target="_self">APISyncMessage</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="332"
+                            class="link-to-prism">src/app.service.ts:332</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Handles General Logic for messages from API-Sync</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="../interfaces/APISyncMessage.html" target="_self" >APISyncMessage</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Message from API-Sync</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onModuleInit"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>onModuleInit</b></span>
+                        <a href="#onModuleInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onModuleInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app.service.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="runKeepAliveTimer"></a>
+                    <span class="name">
+                        <span ><b>runKeepAliveTimer</b></span>
+                        <a href="#runKeepAliveTimer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>runKeepAliveTimer()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="256"
+                            class="link-to-prism">src/app.service.ts:256</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This function runs a timer that if it isn&#39;t called in that time it breaks the connection and restarts it</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendToAPISync"></a>
+                    <span class="name">
+                        <span class="modifier">Public</span>
+                        <span ><b>sendToAPISync</b></span>
+                        <a href="#sendToAPISync"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sendToAPISync(msg: <a href="../interfaces/SatelliteMessage.html" target="_self">SatelliteMessage</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="570"
+                            class="link-to-prism">src/app.service.ts:570</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Send a message to API-Sync</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>msg</td>
+                                    <td>
+                                                <code><a href="../interfaces/SatelliteMessage.html" target="_self" >SatelliteMessage</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Message to be sent to API-Sync</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_apiSyncConnection"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_apiSyncConnection</b></span>
+                        <a href="#_apiSyncConnection"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>Subscription</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">src/app.service.ts:55</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_apiSyncService"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_apiSyncService</b></span>
+                        <a href="#_apiSyncService"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/APISyncService.html" target="_self" >APISyncService</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app.service.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_connected"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_connected</b></span>
+                        <a href="#_connected"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>false</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app.service.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_machines"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_machines</b></span>
+                        <a href="#_machines"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app.service.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_runningServices"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_runningServices</b></span>
+                        <a href="#_runningServices"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app.service.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_savedMessages"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_savedMessages</b></span>
+                        <a href="#_savedMessages"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SatelliteMessage.html" target="_self" >SatelliteMessage[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="58" class="link-to-prism">src/app.service.ts:58</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_streamQueue$"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_streamQueue$</b></span>
+                        <a href="#_streamQueue$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/SatelliteMessage.html" target="_self" >Subject&lt;SatelliteMessage&gt;</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new Subject&lt;SatelliteMessage&gt;()</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app.service.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_streamResponses"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_streamResponses</b></span>
+                        <a href="#_streamResponses"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="81" class="link-to-prism">src/app.service.ts:81</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_taskMonitors"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_taskMonitors</b></span>
+                        <a href="#_taskMonitors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="85" class="link-to-prism">src/app.service.ts:85</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_tempFolder"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_tempFolder</b></span>
+                        <a href="#_tempFolder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app.service.ts:83</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="_trees"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>_trees</b></span>
+                        <a href="#_trees"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>literal type</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app.service.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keepAlivePingTimer"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>keepAlivePingTimer</b></span>
+                        <a href="#keepAlivePingTimer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NodeJS.Timeout</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app.service.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="keepAliveTimer"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>keepAliveTimer</b></span>
+                        <a href="#keepAliveTimer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>NodeJS.Timeout</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app.service.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="namespace"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>namespace</b></span>
+                        <a href="#namespace"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app.service.ts:89</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="satelliteId"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>satelliteId</b></span>
+                        <a href="#satelliteId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="87" class="link-to-prism">src/app.service.ts:87</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="machines"></a>
+                        <span class="name"><b>machines</b><a href="#machines"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>machines()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app.service.ts:70</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="trees"></a>
+                        <span class="name"><b>trees</b><a href="#trees"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>trees()</code></span>
+                    </td>
+                </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app.service.ts:75</a></div>
+                                </td>
+                            </tr>
+
+            </tbody>
+        </table>
+</section>
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { forwardRef, Inject, Injectable, OnModuleInit } from &#x27;@nestjs/common&#x27;;
+import { ConfigService } from &#x27;@nestjs/config&#x27;;
+import { ClientGrpc } from &#x27;@nestjs/microservices&#x27;;
+import { Metadata } from &#x27;grpc&#x27;;
+import { Subject, Subscription } from &#x27;rxjs&#x27;;
+import { tap, filter, catchError } from &#x27;rxjs/operators&#x27;;
+import { join } from &#x27;path&#x27;;
+import { promises as fsPromises, ReadStream } from &#x27;fs&#x27;;
+import pm2Types from &#x27;pm2&#x27;;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const pm2: typeof pm2Types &#x3D; require(&#x27;pm2&#x27;);
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const Tail &#x3D; require(&#x27;tail&#x27;).Tail;
+
+import Log from &#x27;./lib/logger&#x27;;
+import {
+    APISyncService,
+    ProcessedTree,
+    SatelliteMessage,
+    SatelliteTask,
+    ServiceInterpreter,
+    ServiceMachine,
+    SatelliteOutput,
+    APISyncMessage,
+    StreamResponse,
+    PM2BusPacket,
+} from &#x27;./interfaces&#x27;;
+import { AuthService } from &#x27;./auth/auth.service&#x27;;
+import { StateMachinesService } from &#x27;./stateMachines/stateMachines.service&#x27;;
+import { locationHandler } from &#x27;./lib/utilities&#x27;;
+import { TreeService } from &#x27;./tree.service&#x27;;
+import { TaskService } from &#x27;./task.service&#x27;;
+import { Pm2Service } from &#x27;./pm2/pm2.service&#x27;;
+import { CommandService } from &#x27;./command.service&#x27;;
+
+// Timer is hooked up currently
+const pingTimer &#x3D; 30000; // Every 30s it will send a ping
+const pingKillTimer &#x3D; 60000; // If 1 minute goes by without a response it will close the connection and attempt to restart
+
+// If connection fails this timer is how long to wait between attempts to reconnect
+const retryTimer &#x3D; 5000;
+
+// Timer to monitor PM2 Statuses
+const pm2MonitorTimer &#x3D; 5000;
+
+const VERSION &#x3D; &#x27;2.0&#x27;; // 12/06/21
+// Reserved Keyword to remove a machine
+const REMOVE &#x3D; &#x27;REMOVE&#x27;;
+// const namespace &#x3D; &#x27;scidap_satellite&#x27;;
+@Injectable()
+export class AppService implements OnModuleInit {
+    // Service that handles connection to API-Sync
+    private _apiSyncService: APISyncService;
+    // Stores subscription to API-Sync
+    private _apiSyncConnection: Subscription;
+    // Subject that interacts with API-Sync
+    private _streamQueue$: Subject&lt;SatelliteMessage&gt; &#x3D; new Subject&lt;SatelliteMessage&gt;();
+    private _savedMessages: SatelliteMessage[] &#x3D; [];
+
+    private _connected &#x3D; false;
+    // private networkInterfaces: string;
+    private keepAliveTimer: NodeJS.Timeout; // This one tracks how long till disconnect
+    private keepAlivePingTimer: NodeJS.Timeout; // This one tracks when to send keep alives
+
+    // Holds any Service that was running through pm2 before Satellite Startup
+    //  Not used
+    private _runningServices &#x3D; {};
+
+    // All of the Machines that are currently running
+    public get machines(): { [key: string]: { fsm: ServiceInterpreter; pm2_id: number } } {
+        return this._machines;
+    }
+    private _machines: { [key: string]: { fsm: ServiceInterpreter; pm2_id: number } } &#x3D; {};
+    // All of the Dependency trees we have been sent
+    public get trees(): { [key: string]: ProcessedTree } {
+        return this._trees;
+    }
+    private _trees: { [key: string]: ProcessedTree } &#x3D; {};
+
+    // Holds all of the stream response references
+    private _streamResponses: { [key: string]: StreamResponse } &#x3D; {};
+
+    private _tempFolder: string;
+
+    private _taskMonitors: { [key: string]: { folderName: string; closeStream: () &#x3D;&gt; void; name: string } } &#x3D; {};
+
+    public satelliteId: string;
+
+    private namespace: string;
+
+    constructor(
+        @Inject(&#x27;API_SYNC_CONNECTION_SERVICE&#x27;) private client: ClientGrpc,
+        private authService: AuthService,
+        private _configService: ConfigService,
+        @Inject(forwardRef(() &#x3D;&gt; StateMachinesService))
+        private stateMachineService: StateMachinesService,
+        private _treeService: TreeService,
+        private _taskService: TaskService,
+        private _commandService: CommandService,
+        @Inject(forwardRef(() &#x3D;&gt; Pm2Service))
+        private _pm2Service: Pm2Service,
+    ) {
+        this.namespace &#x3D; this._configService.get(&#x27;namespace&#x27;);
+        this._tempFolder &#x3D; !!this._configService.get(&#x27;tmp&#x27;) ? this._configService.get(&#x27;tmp&#x27;) : &#x27;/tmp/scidap_satellite&#x27;;
+        this.stateMachineService.sendEvent$
+            .pipe(
+                filter(({ to }) &#x3D;&gt; Object.keys(this._machines).includes(to)),
+                tap(({ to, type }) &#x3D;&gt; Log.info(&#x60;Sending ${type} to ${to}&#x60;)),
+            )
+            .subscribe(({ to, type }) &#x3D;&gt; {
+                this._machines[to].fsm.send({ type });
+            });
+
+        // Do we want to have this as final failsafe?
+        // process.on(&#x27;uncaughtException&#x27;, (err) &#x3D;&gt; {
+        //     console.log(&#x27;bad error&#x27;, err);
+        // });
+    }
+
+    async onModuleInit() {
+        // As long as SKIP_KILL isn&#x27;t set we kill all pm2 instances with the scidap namespace
+        try {
+            if (!this._configService.get(&#x27;SKIP_KILL&#x27;)) {
+                await this._pm2Service.killPm2Instances();
+            }
+        } catch (err) {
+            Log.error(&#x60;Error with pm2: ${err}&#x60;);
+        }
+
+        try {
+            await fsPromises.mkdir(this._tempFolder);
+        } catch (err) {
+            Log.debug(&#x27;Scripts Folder already exists&#x27;);
+        }
+        this._apiSyncService &#x3D; this.client.getService&lt;APISyncService&gt;(&#x27;APISyncService&#x27;);
+        // Start listening to the pm2 bus so that we can get messages from the Satellite Services
+        //  Currently we don&#x27;t have anything that communicates on this protocol
+        //  We will want to expand this when we write the handler services, since they can take advantage
+        //  of the more explict RPC connection that is used here instead of just writing to stdout
+        pm2.launchBus((err, pm2_bus) &#x3D;&gt; {
+            if (err) {
+                // Should send response to API that we failed to turn on
+                Log.error(&#x27;Not able to connect to PM2&#x27;);
+            }
+            pm2_bus.on(&#x27;process:msg&#x27;, (packet) &#x3D;&gt; {
+                const namespace &#x3D; packet.process.namespace;
+                if (!namespace.includes(this.namespace)) return;
+                const name &#x3D; packet.process.name;
+                Log.debug(&#x60;Process:msg from ${name}&#x60;);
+                if (namespace.includes(&#x27;task&#x27;)) {
+                    const sr &#x3D; this._streamResponses[name];
+                    this._pm2Service.setupProcessListener(packet, sr, true);
+                } else {
+                    const busresponse &#x3D; !!this._trees[name] ? this._trees[name].busresponse : null;
+                    if (!busresponse) {
+                        const sr &#x3D; this._streamResponses[name];
+                        this._pm2Service.setupProcessListener(packet, sr, true);
+                    } else {
+                        try {
+                            this._machines[name].fsm.state.context.busresponse(packet.data);
+                        } catch (err) {
+                            Log.error(&#x60;Error sending Bus to ${name} at ${busresponse}&#x60;);
+                        }
+                    }
+                }
+                // Log.info(&#x60;Response from ${packet.process.name}: ${packet.data}&#x60;);
+            });
+            pm2_bus.on(&#x27;log:err&#x27;, (packet) &#x3D;&gt; {
+                if (!packet.process.namespace.includes(this.namespace)) return;
+                Log.debug(&#x60;Log:err from ${packet.process?.name}&#x60;);
+                const sr &#x3D; this._streamResponses[packet.process.name];
+                this._pm2Service.setupProcessListener(packet, sr, true);
+            });
+            pm2_bus.on(&#x27;log:out&#x27;, (packet: PM2BusPacket) &#x3D;&gt; {
+                if (!packet.process.namespace.includes(this.namespace)) return;
+                Log.debug(&#x60;Log:out from ${packet.process?.name}&#x60;);
+                const sr &#x3D; this._streamResponses[packet.process.name];
+                this._pm2Service.setupProcessListener(packet, sr);
+            });
+            // I don&#x27;t think we use this one but I&#x27;m leaving it here in case
+            pm2_bus.on(&#x27;data&#x27;, (packet) &#x3D;&gt; {
+                Log.info(&#x27;We shouldnt be seeing this, since we dont use it&#x27;);
+                Log.debug(&#x27;data&#x27;, packet);
+            });
+        });
+        this._startConnection();
+        this._checkPm2List();
+    }
+
+    /**
+     * Checks PM2 list periodically for any services that are errored or stopped
+     */
+    private async _checkPm2List() {
+        try {
+            await new Promise((resolve, reject) &#x3D;&gt; {
+                pm2.list((err, proc) &#x3D;&gt; {
+                    if (err) {
+                        reject(&#x60;Error checking Pm2: ${err}&#x60;);
+                        return;
+                    }
+                    // If the service is a task then we need to check if it is stopped or errored
+                    proc.filter((p: any) &#x3D;&gt; p.pm2_env.namespace &#x3D;&#x3D;&#x3D; this.namespace + &#x27;_task&#x27;)
+                        // Make sure have a monitor for it
+                        .filter((p) &#x3D;&gt; !!this._taskMonitors[p.pm_id])
+                        .forEach((p: any) &#x3D;&gt; {
+                            Log.debug(
+                                &#x60;Task ${p.name} is ${p.pm2_env.status}${!!p.pm2_env.exit_code ? &#x60;with status code ${p.pm2_env.exit_code}&#x60; : &#x27;&#x27;}&#x60;,
+                            );
+                            // Currently we do the same thing with both of these outcomes
+                            //  But we could potentially handle errors differently
+                            //  We already report them somewhere else, and pm2 already attempts restarts
+                            //  automatically
+                            if ([&#x27;stopped&#x27;, &#x27;errored&#x27;].includes(p.pm2_env.status)) {
+                                const err &#x3D; p.pm2_env.exit_code !&#x3D;&#x3D; 0;
+                                if (err) {
+                                    // This is for error handling
+                                    const sr &#x3D; this._streamResponses[p.name];
+                                    sr.satMessage.next({
+                                        targetmachine: sr.targetmachine,
+                                        error: true,
+                                        output: &#x27;&#x27;,
+                                        method: sr.out,
+                                        satellite: this.satelliteId,
+                                    });
+                                }
+                                this._taskMonitors[p.pm_id].closeStream();
+                            }
+                        });
+                    // If the service is a Service (meaning it should run continously)
+                    proc.filter((p: any) &#x3D;&gt; p.pm2_env.namespace &#x3D;&#x3D;&#x3D; this.namespace)
+                        // Make sure we have a machine for it
+                        .filter((p) &#x3D;&gt; !!this._machines[p.name])
+                        .forEach((p) &#x3D;&gt; {
+                            // Change the machines status to error
+                            Log.debug(&#x60;Service ${p.name} is ${p.pm2_env.status}&#x60;);
+                            if (p.pm2_env.status &#x3D;&#x3D;&#x3D; &#x27;errored&#x27;) {
+                                this._machines[p.name].fsm.send(&#x27;ERROR&#x27;);
+                            }
+                        });
+                    resolve(true);
+                });
+            });
+        } catch (err) {
+            Log.error(&#x60;Error Checking Pm2 List: ${err}&#x60;);
+        } finally {
+            // Always set a timer to run the check again
+            setTimeout(() &#x3D;&gt; {
+                this._checkPm2List();
+            }, pm2MonitorTimer);
+        }
+    }
+
+    /**
+     * This function runs a timer that if it isn&#x27;t called in that time it breaks the connection and restarts it
+     */
+    runKeepAliveTimer() {
+        clearTimeout(this.keepAliveTimer);
+        this.keepAliveTimer &#x3D; setTimeout(() &#x3D;&gt; {
+            Log.info(&#x27;Did not recieve Keep Alive Ping from API-Sync&#x27;);
+            clearInterval(this.keepAlivePingTimer);
+            this._connected &#x3D; false;
+        }, pingKillTimer);
+    }
+
+    /**
+     * Opens the connection to API-Sync and embeds Satellite token into metadata
+     *  Also responsible for setting up subscription that handles trees and tasks
+     */
+    private _startConnection() {
+        Log.debug(&#x27;Attempting to form Connection with API-sync&#x27;);
+        const metadata &#x3D; new Metadata();
+        metadata.add(&#x27;jwt&#x27;, this._configService.get(&#x27;token&#x27;));
+        this._apiSyncConnection &#x3D; this._apiSyncService
+            .streamQueue(this._streamQueue$, metadata)
+            .pipe(
+                catchError((err) &#x3D;&gt; {
+                    throw &#x60;Error connecting to API-Sync ${err}&#x60;;
+                }),
+            )
+            .subscribe(
+                (message) &#x3D;&gt; {
+                    // We need to know what this satellite&#x27;s id is so we store it when it is sent to us
+                    //  It doesn&#x27;t matter that we continously overwrite it, it should always be the same
+                    if (message.satelliteid) this.satelliteId &#x3D; message.satelliteid;
+                    this._connected &#x3D; true;
+                    this.handleMessage(message);
+                },
+                (err) &#x3D;&gt; {
+                    this._apiSyncConnection.unsubscribe();
+                    // If there is an error attempt to reconnect every 5s
+                    Log.error(&#x60;Error Connecting to API-Sync: ${err}&#x60;);
+                    try {
+                        clearTimeout(this.keepAliveTimer);
+                        clearInterval(this.keepAlivePingTimer);
+                    } catch (err) {
+                        Log.error(&#x60;Failed to clear timouts: ${err}&#x60;);
+                    }
+                    this._connected &#x3D; false;
+                    setTimeout(() &#x3D;&gt; this._startConnection(), retryTimer);
+                },
+                () &#x3D;&gt; {
+                    // If API-Sync has broken the connection attempt to reconnect every 5s
+                    //  In regular use this isn&#x27;t happening. If API-Sync shuts down we get an error
+                    //  This is here for potential future functionallity (potentially updating)
+                    Log.info(&#x27;API-Sync Stream Ended&#x27;);
+                    this._apiSyncConnection.unsubscribe();
+                    try {
+                        clearTimeout(this.keepAliveTimer);
+                        clearInterval(this.keepAlivePingTimer);
+                    } catch (err) {
+                        Log.error(&#x60;Failed to clear timouts: ${err}&#x60;);
+                    }
+                    this._connected &#x3D; false;
+                    setTimeout(() &#x3D;&gt; this._startConnection(), retryTimer);
+                },
+            );
+        // We have to send a message so that the connection is made
+        this._streamQueue$.next({ keepalive: true });
+        // This starts the countdown until it closes connection if a ping isn&#x27;t received
+        this.runKeepAliveTimer();
+        // This starts the keep alive ping that is sent every interval
+        this.keepAlivePingTimer &#x3D; setInterval(() &#x3D;&gt; {
+            Log.debug(&#x27;Ping Sent&#x27;);
+            this._streamQueue$.next({ keepalive: true });
+        }, pingTimer);
+    }
+
+    /**
+     * Handles General Logic for messages from API-Sync
+     * @param message Message from API-Sync
+     */
+    private async handleMessage(message: APISyncMessage) {
+        if (message.keepalive) {
+            Log.debug(&#x27;Ping Received&#x27;);
+            this.runKeepAliveTimer();
+        }
+        // If any messages were saved (messages sent while connection down)
+        //  Then they should be sent to API-Sync
+        if (this._savedMessages.length) {
+            while (this._savedMessages.length &gt; 0) {
+                const msg &#x3D; this._savedMessages.shift();
+                this._streamQueue$.next(msg);
+            }
+        }
+
+        // If a field is empty in gRPC it will be undefined so we make sure these are set
+        const trees &#x3D; !!message.trees ? message.trees : [];
+        const tasks &#x3D; !!message.tasks ? message.tasks : [];
+        const commands &#x3D; !!message.commands ? message.commands : [];
+
+        const processedTrees &#x3D; this._treeService.processTrees(trees);
+
+        // Start each Root Machine one at a time
+        for (const tree of processedTrees) {
+            await this._initialStateMachines(tree);
+        }
+
+        // Handle any tasks for the Main Service (This is essentially starting something with pm2)
+        const tasksForPm2 &#x3D; tasks.filter((task) &#x3D;&gt; task.target &#x3D;&#x3D;&#x3D; &#x27;main_service&#x27;);
+        for (const task of tasksForPm2) {
+            const { created, options, msg, folderName } &#x3D; await this._taskService.processTaskForPm2(task);
+            // This handles the error of creating a script, eventually we will want to send this
+            //  back to API-Sync, currently it just doesn&#x27;t start
+            if (!created) {
+                Log.error(msg);
+                continue;
+            }
+            task.options &#x3D; options;
+
+            try {
+                const streamResponse: StreamResponse &#x3D; { respond: task.streamresponse };
+                if (task.streamresponse) {
+                    try {
+                        const { satMessage, sub } &#x3D; this._setupStream();
+                        streamResponse.satMessage &#x3D; satMessage;
+                        streamResponse.sub &#x3D; sub;
+                        streamResponse.targetmachine &#x3D; task.apimachine;
+                        streamResponse.out &#x3D; task.outresponse;
+                        streamResponse.err &#x3D; task.errorresponse;
+                        this._streamResponses[task.name] &#x3D; streamResponse;
+                    } catch (err) {
+                        Log.error(&#x60;Error Setting up listeners for ${task.name}: ${err}&#x60;);
+                    }
+                }
+                const service &#x3D; await this._pm2Service.runCommand(task.command, options);
+                const { pm2_env } &#x3D; service;
+                const closeStream &#x3D; () &#x3D;&gt; this._closeStream(folderName, pm2_env.pm_id, task);
+
+                this._taskMonitors[pm2_env.pm_id] &#x3D; {
+                    folderName,
+                    closeStream,
+                    name: task.name,
+                };
+            } catch (err) {
+                Log.error(&#x60;Failed to start read streams for ${task.name}: ${err}&#x60;);
+            }
+        }
+        // TODO Handle Sending tasks to other services through pm2 here
+        //  This might not be needed
+
+        // For handling Commands
+        // Get all the currently running machines so that we can check to make sure the target exists
+        const machineList &#x3D; Object.keys(this._machines);
+        const taskList &#x3D; Object.keys(this._taskMonitors); // This is an array of task pm2_ids
+        for (const command of commands) {
+            let valid &#x3D; false;
+            if (machineList.includes(command.target)) {
+                // Send command to Machine
+                const { fsm, pm2_id } &#x3D; this.machines[command.target];
+                if (command.command &#x3D;&#x3D;&#x3D; REMOVE) {
+                    try {
+                        fsm.send(&#x27;STOPPED&#x27;);
+                        const sr &#x3D; this._streamResponses[command.target];
+                        if (sr) {
+                            this._streamQueue$.next({
+                                sender: &#x27;main_satellite&#x27;,
+                                target: sr.targetmachine,
+                                messages: [{ action: &#x27;send&#x27;, body: &#x27;OFFLINE&#x27; }],
+                            });
+                        }
+                        delete this._trees[command.target];
+                        await this._pm2Service.killOneInstance(pm2_id);
+                        delete this._streamResponses[command.target];
+                        delete this._machines[command.target];
+                    } catch (err) {
+                        // We should have a formallized way to report these errors
+                        Log.error(&#x60;Failed to Remove Tree ${command.target}&#x60;);
+                    }
+                    continue;
+                }
+                await this._commandService.forMachine(pm2_id, fsm, command);
+                valid &#x3D; true;
+            }
+            const task &#x3D; taskList.find((k) &#x3D;&gt; this._taskMonitors[k].name &#x3D;&#x3D;&#x3D; command.target);
+            if (task) {
+                // Send command to Task
+                if (command.command &#x3D;&#x3D;&#x3D; REMOVE) {
+                    try {
+                        const id &#x3D; typeof task &#x3D;&#x3D;&#x3D; &#x27;string&#x27; ? parseInt(task) : (task as number);
+                        await this._pm2Service.killOneInstance(id);
+                        // This handles all the removal for a task
+                        this._taskMonitors[command.target].closeStream();
+                    } catch (err) {
+                        // We should have a formallized way to report these errors
+                        Log.error(&#x60;Failed to Remove Task ${command.target}&#x60;);
+                    }
+                    continue;
+                }
+                await this._commandService.forTask(task, command);
+                valid &#x3D; true;
+            }
+            // Currently we only log that the command couldn&#x27;t be run
+            //  Sending a response to API-Sync is probably a good idea in the future so this isn&#x27;t a silent error
+            if (!valid) {
+                Log.error(&#x60;Couldn&#x27;t find ${command.target}&#x60;);
+            }
+        }
+    }
+
+    /**
+     * Build and start the Root node of a Dependency Tree
+     * @param tree Root Tree from API-Sync
+     * @returns boolean based on succes starting
+     */
+    private async _initialStateMachines(tree: ProcessedTree): Promise&lt;boolean&gt; {
+        try {
+            // Create the machine with all of the children nested
+            const parentNode &#x3D; this._createStateMachines(tree);
+            // Create the interpreted machine so that it can start
+            const interpreted &#x3D; this.stateMachineService.interpretStateMachine(parentNode);
+
+            interpreted.start();
+            // Set up Logic that should be done when state transitions
+            const setupOnTransitions &#x3D; (fsm: ServiceInterpreter, children: ProcessedTree[]) &#x3D;&gt; {
+                // Save all of individual machines so they are easily accessible
+                this._machines[fsm.state.context.name] &#x3D; { fsm, pm2_id: null };
+                fsm.onTransition((state) &#x3D;&gt; {
+                    Log.info(&#x60;${state.context.name} current state is:&#x60;, state.value);
+                    // Currently we don&#x27;t have any logic here, but we can potentially add some
+                    //  If we want to build in logic on state transitions this is where we would do it
+                    //  Originally I thought we would handle error handling here
+                    //  I left this as scaffolding for potential future implementations
+                    switch (state.value) {
+                        case &#x27;error&#x27;:
+                            break;
+                        default:
+                            Log.debug(&#x27;No action for state&#x27;);
+                            break;
+                    }
+                });
+                // Setup the transitions for all of the children
+                if (children) {
+                    children.forEach((child) &#x3D;&gt; {
+                        setupOnTransitions(fsm.state.context[child.name], child.children);
+                    });
+                }
+            };
+
+            setupOnTransitions(interpreted, tree.children);
+            // Recursively start all services, including children
+            const startServices &#x3D; async (curr: ProcessedTree) &#x3D;&gt; {
+                try {
+                    const { pm2_env } &#x3D; await this._pm2Service.runCommand(&#x27;start&#x27;, { name: curr.name }, true);
+                    this._machines[curr.name].pm2_id &#x3D; !!pm2_env ? pm2_env.pm_id : null;
+                    try {
+                        const streamResponse: StreamResponse &#x3D; { respond: !!curr.apimachine };
+                        if (curr.apimachine) {
+                            const { satMessage, sub } &#x3D; this._setupStream();
+                            streamResponse.satMessage &#x3D; satMessage;
+                            streamResponse.sub &#x3D; sub;
+                            streamResponse.targetmachine &#x3D; curr.apimachine;
+                            streamResponse.out &#x3D; curr.outresponse;
+                            streamResponse.err &#x3D; curr.errorresponse;
+                        }
+                        this._streamResponses[curr.name] &#x3D; streamResponse;
+                    } catch (err) {
+                        Log.error(&#x60;Error Setting up listeners for ${curr.name}: ${err}&#x60;);
+                    }
+                } catch (err) {
+                    Log.error(&#x60;Failed to Start ${curr.name}: ${err}&#x60;);
+                }
+                for (const child of curr.children) {
+                    await startServices(child);
+                }
+            };
+            await startServices(tree);
+            // Save the tree nodes for easier access as well
+            this._trees[tree.name] &#x3D; tree;
+            return true;
+        } catch (err) {
+            Log.error(&#x60;Error Creating Root Machine ${tree.name}: ${err}&#x60;);
+            return false;
+        }
+    }
+
+    /**
+     * Generates a FSM for current tree node and all children recursively
+     * @param tree A Tree from API-Sync
+     * @param child False if Root Node
+     * @returns A Finite State Machine
+     */
+    private _createStateMachines(tree: ProcessedTree, child &#x3D; false): ServiceMachine {
+        try {
+            const children: ServiceMachine[] &#x3D; [];
+            if (!!tree.children) {
+                // Create all the children state machines first recursively
+                for (let i &#x3D; 0; i &lt; tree.children.length; i++) {
+                    const child &#x3D; this._createStateMachines(tree.children[i], true);
+                    children.push(child);
+                }
+            }
+
+            // Make sure that the script is within scidap root, we can potentially change this
+            const home &#x3D; this._configService.get(&#x27;scidap_home&#x27;);
+            const updatedLocation &#x3D; locationHandler(home, tree.options.script);
+            Log.debug(&#x27;Updated Location:&#x27;, updatedLocation);
+            const newFSM &#x3D; this.stateMachineService.createStateMachine(tree, updatedLocation, child, children);
+            return newFSM;
+        } catch (err) {
+            // If a child machine fails to be created that doesn&#x27;t break the whole tree
+            Log.error(&#x60;Error Creating Machine ${tree.name}: ${err}&#x60;);
+            return null;
+        }
+    }
+
+    /**
+     * Send a message to API-Sync
+     * @param msg Message to be sent to API-Sync
+     */
+    public sendToAPISync(msg: SatelliteMessage) {
+        Log.debug(msg);
+        Log.info(&#x60;Sending Message to ${msg.target} from ${msg.sender}&#x60;);
+        if (this._connected) {
+            this._streamQueue$.next(msg);
+        } else {
+            Log.info(&#x27;Satellite not connected to API-Sync, saving message&#x27;);
+            this._savedMessages.push(msg);
+        }
+    }
+
+    private _setupStream(): { sub: Subscription; satMessage: Subject&lt;SatelliteOutput&gt; } {
+        const satMessage &#x3D; new Subject&lt;SatelliteOutput&gt;();
+        const sub &#x3D; this._apiSyncService.commandStream(satMessage).subscribe(
+            (i) &#x3D;&gt; {
+                // Leaving for future functionality we don&#x27;t use it currently
+                //  This is called when API-Sync sends a response here
+                Log.info(&#x27;Message back from api sync&#x27;, i);
+            },
+            () &#x3D;&gt; {
+                // Leaving for future functionality we don&#x27;t use it currently
+                //  This is called when API-Sync manually closes this stream
+                Log.info(&#x27;Closing Command Stream&#x27;);
+            },
+        );
+        return {
+            sub,
+            satMessage,
+        };
+    }
+
+    private async _closeStream(folderName: string, pmId: number, task: SatelliteTask): Promise&lt;boolean&gt; {
+        if (!task.savelogs) {
+            Log.info(&#x60;Removing Logs from ${folderName}&#x60;);
+            try {
+                await fsPromises.rmdir(join(this._tempFolder, folderName), { recursive: true });
+            } catch (err) {
+                Log.error(&#x60;Failed to remove Logs: ${err}&#x60;);
+            }
+        }
+        Log.info(&#x60;Removing Pm2 Process ${pmId}&#x60;);
+        try {
+            await new Promise((resolve, reject) &#x3D;&gt; {
+                pm2.connect((err) &#x3D;&gt; {
+                    if (err) {
+                        reject(err);
+                        return;
+                    }
+                    pm2.delete(pmId, (err) &#x3D;&gt; {
+                        if (err) {
+                            reject(err);
+                            return;
+                        }
+                        this._streamResponses[task.name].sub.unsubscribe();
+                        delete this._streamResponses[task.name];
+                        delete this._taskMonitors[pmId];
+                        resolve(true);
+                    });
+                });
+            });
+        } catch (err) {
+            Log.error(&#x60;Failed to remove Pm2 Process: ${err}&#x60;);
+        }
+        return true;
+    }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
