@@ -40,7 +40,7 @@
 
 <ol class="breadcrumb">
   <li>Injectables</li>
-  <li >AuthService</li>
+  <li >CommandService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/auth/auth.service.ts</code>
+            <code>src/command.service.ts</code>
         </p>
 
 
@@ -66,25 +66,6 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Private</span>
-                                <a href="#_jwt" >_jwt</a>
-                            </li>
-                            <li>
-                                    <span class="modifier">Public</span>
-                                <a href="#publicKey" >publicKey</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -95,13 +76,14 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#decode" >decode</a>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#forMachine" >forMachine</a>
                             </li>
                             <li>
-                                <a href="#getJWT" >getJWT</a>
-                            </li>
-                            <li>
-                                <a href="#verify" >verify</a>
+                                    <span class="modifier">Public</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#forTask" >forTask</a>
                             </li>
                         </ul>
                     </td>
@@ -111,20 +93,6 @@
 
 
 
-                    <tr>
-                        <td class="col-md-4">
-                            <h6><b>Accessors</b></h6>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <ul class="index-list">
-                                <li>
-                                    <a href="#satelliteId" >satelliteId</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
         </tbody>
     </table>
 </section>
@@ -135,7 +103,7 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(jwtService: JwtService)</code>
+<code>constructor(_pm2Service: <a href="../injectables/Pm2Service.html" target="_self">Pm2Service</a>)</code>
                     </td>
                 </tr>
 
@@ -153,10 +121,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>jwtService</td>
+                                                        <td>_pm2Service</td>
                                                   
                                                         <td>
-                                                                    <code>JwtService</code>
+                                                                        <code><a href="../injectables/Pm2Service.html" target="_self" >Pm2Service</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -182,16 +150,19 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="decode"></a>
+                    <a name="forMachine"></a>
                     <span class="name">
-                        <span ><b>decode</b></span>
-                        <a href="#decode"><span class="icon ion-ios-link"></span></a>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>forMachine</b></span>
+                        <a href="#forMachine"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>decode(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>forMachine(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, machine: <a href="../undefineds/ServiceInterpreter.html" target="_self">ServiceInterpreter</a>, command: <a href="../interfaces/ServiceCommand.html" target="_self">ServiceCommand</a>)</code>
                 </td>
             </tr>
 
@@ -200,6 +171,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Send a command to a Machine</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -210,13 +183,14 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>token</td>
+                                    <td>id</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
                                     </td>
 
                                     <td>
@@ -224,6 +198,42 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Process Id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>machine</td>
+                                    <td>
+                                                <code><a href="../miscellaneous/typealiases.html#ServiceInterpreter" target="_self" >ServiceInterpreter</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Machine to send task to</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>command</td>
+                                    <td>
+                                                <code><a href="../interfaces/ServiceCommand.html" target="_self" >ServiceCommand</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Command to be executed</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -231,41 +241,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getJWT"></a>
-                    <span class="name">
-                        <span ><b>getJWT</b></span>
-                        <a href="#getJWT"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getJWT()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                        <p>A Promise after the command has been sent</p>
 
                     </div>
                 </td>
@@ -276,16 +256,19 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="verify"></a>
+                    <a name="forTask"></a>
                     <span class="name">
-                        <span ><b>verify</b></span>
-                        <a href="#verify"><span class="icon ion-ios-link"></span></a>
+                        <span class="modifier">Public</span>
+                        <span class="modifier">Async</span>
+                        <span ><b>forTask</b></span>
+                        <a href="#forTask"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>verify(token: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>forTask(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, command: <a href="../interfaces/ServiceCommand.html" target="_self">ServiceCommand</a>)</code>
                 </td>
             </tr>
 
@@ -294,6 +277,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Send a command to a Task</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -304,11 +289,12 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>token</td>
+                                    <td>id</td>
                                     <td>
                                                 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
                                     </td>
@@ -318,6 +304,26 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Process Id</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>command</td>
+                                    <td>
+                                                <code><a href="../interfaces/ServiceCommand.html" target="_self" >ServiceCommand</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Command to be executed</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -325,90 +331,19 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A Promise after the command has been sent</p>
+
                     </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </section>
-            <section>
-    
-    <h3 id="inputs">
-        Properties
-    </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="_jwt"></a>
-                    <span class="name">
-                            <span class="modifier">Private</span>
-                        <span ><b>_jwt</b></span>
-                        <a href="#_jwt"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="publicKey"></a>
-                    <span class="name">
-                            <span class="modifier">Public</span>
-                        <span ><b>publicKey</b></span>
-                        <a href="#publicKey"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </td>
-                </tr>
-
-
-        </tbody>
-    </table>
-</section>
-
-            <section>
-    <h3 id="accessors">
-        Accessors
-    </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="satelliteId"></a>
-                        <span class="name"><b>satelliteId</b><a href="#satelliteId"><span class="icon ion-ios-link"></span></a></span>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td class="col-md-4">
-                        <span class="accessor"><b>get</b><code>satelliteId()</code></span>
-                    </td>
-                </tr>
-
-            </tbody>
-        </table>
-</section>
     </div>
 
 
@@ -453,7 +388,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'AuthService.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CommandService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content interface">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -38,16 +38,9 @@
 
 
 
-
-
-
-
-
 <ol class="breadcrumb">
-  <li>Interfaces</li>
-  <li
-  >
-  BaseModuleInterface</li>
+  <li>Injectables</li>
+  <li >TreeService</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,42 +55,85 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/interfaces/satellite.interface.ts</code>
+            <code>src/tree.service.ts</code>
         </p>
 
 
 
 
-        <section>
-            <h3 id="index">Index</h3>
-            <table class="table table-sm table-bordered index-table">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <h6><b>Methods</b></h6>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <ul class="index-list">
-                                <li>
-                                    <a href="#getFile" 
->
-                                        getFile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#getInfo" 
->
-                                        getInfo
-                                    </a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#processTrees" >processTrees</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_pm2Service: <a href="../injectables/Pm2Service.html" target="_self">Pm2Service</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_pm2Service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/Pm2Service.html" target="_self" >Pm2Service</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
             <section>
     
@@ -108,16 +144,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="getFile"></a>
+                    <a name="processTrees"></a>
                     <span class="name">
-                        <span ><b>getFile</b></span>
-                        <a href="#getFile"><span class="icon ion-ios-link"></span></a>
+                        <span class="modifier">Public</span>
+                        <span ><b>processTrees</b></span>
+                        <a href="#processTrees"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getFile(fileUrl: UrlWithStringQuery, userId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, sampleId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>processTrees(trees: <a href="../interfaces/DependencyTree.html" target="_self">DependencyTree[]</a>)</code>
                 </td>
             </tr>
 
@@ -126,6 +164,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Takes a raw list of trees and creates the structure we need for our state machines</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -136,13 +176,14 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>fileUrl</td>
+                                    <td>trees</td>
                                     <td>
-                                            <code>UrlWithStringQuery</code>
+                                                <code><a href="../interfaces/DependencyTree.html" target="_self" >DependencyTree[]</a></code>
                                     </td>
 
                                     <td>
@@ -150,30 +191,10 @@
                                     </td>
 
 
-                                </tr>
-                                <tr>
-                                    <td>userId</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <p>A list of trees from API-Sync</p>
+
                                     </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>sampleId</td>
-                                    <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-                                    </td>
-
-                                    <td>
-                                        Yes
-                                    </td>
-
-
                                 </tr>
                             </tbody>
                         </table>
@@ -181,41 +202,11 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="../interfaces/FileData.html" target="_self" >FileData</a></code>
+                        <b>Returns : </b>        <code><a href="../interfaces/ProcessedTree.html" target="_self" >ProcessedTree[]</a></code>
 
                     </div>
                     <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getInfo"></a>
-                    <span class="name">
-                        <span ><b>getInfo</b></span>
-                        <a href="#getInfo"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getInfo()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>literal type</code>
+                        <p>A list of trees that we can use to create State Machines</p>
 
                     </div>
                 </td>
@@ -227,7 +218,13 @@
     </div>
 
 
+
 </div>
+
+
+
+
+
 
 
 
@@ -261,8 +258,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'BaseModuleInterface.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'TreeService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

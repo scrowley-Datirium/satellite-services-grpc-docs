@@ -47,7 +47,7 @@
   <li>Interfaces</li>
   <li
   >
-  SatelliteJWT</li>
+  APISyncMessage</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/interfaces/satellite.interface.ts</code>
+            <code>src/interfaces/apiSync.interface.ts</code>
         </p>
 
 
@@ -81,33 +81,41 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#aud" 
+                                        <a href="#commands" 
 >
-                                            aud
+                                            commands
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#exp" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#keepalive" 
 >
-                                            exp
+                                            keepalive
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#iat" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#satelliteid" 
 >
-                                            iat
+                                            satelliteid
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#sub" 
+                                        <a href="#taskId" 
 >
-                                            sub
+                                            taskId
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#userId" 
+                                        <a href="#tasks" 
 >
-                                            userId
+                                            tasks
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#trees" 
+>
+                                            trees
                                         </a>
                                 </li>
                             </ul>
@@ -125,9 +133,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="aud"></a>
-                                        <span class="name "><b>aud</b>
-                                            <a href="#aud">
+                                        <a name="commands"></a>
+                                        <span class="name "><b>commands</b>
+                                            <a href="#commands">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -135,7 +143,116 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>aud:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>commands:         <code><a href="../interfaces/ServiceCommand.html" target="_self" >ServiceCommand[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/ServiceCommand.html" target="_self" >ServiceCommand[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="keepalive"></a>
+                                        <span class="name "><b>keepalive</b>
+                                            <a href="#keepalive">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>keepalive:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="satelliteid"></a>
+                                        <span class="name "><b>satelliteid</b>
+                                            <a href="#satelliteid">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>satelliteid:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="taskId"></a>
+                                        <span class="name "><b>taskId</b>
+                                            <a href="#taskId">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>taskId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -158,9 +275,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="exp"></a>
-                                        <span class="name "><b>exp</b>
-                                            <a href="#exp">
+                                        <a name="tasks"></a>
+                                        <span class="name "><b>tasks</b>
+                                            <a href="#tasks">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -168,7 +285,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>exp:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>tasks:         <code><a href="../interfaces/SatelliteTask.html" target="_self" >SatelliteTask[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -176,7 +293,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/SatelliteTask.html" target="_self" >SatelliteTask[]</a></code>
 
                                         </td>
                                     </tr>
@@ -191,9 +308,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="iat"></a>
-                                        <span class="name "><b>iat</b>
-                                            <a href="#iat">
+                                        <a name="trees"></a>
+                                        <span class="name "><b>trees</b>
+                                            <a href="#trees">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -201,7 +318,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>iat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>trees:         <code><a href="../interfaces/DependencyTree.html" target="_self" >DependencyTree[]</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -209,73 +326,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="sub"></a>
-                                        <span class="name "><b>sub</b>
-                                            <a href="#sub">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>sub:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="userId"></a>
-                                        <span class="name "><b>userId</b>
-                                            <a href="#userId">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>userId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/DependencyTree.html" target="_self" >DependencyTree[]</a></code>
 
                                         </td>
                                     </tr>
@@ -325,7 +376,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'SatelliteJWT.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'APISyncMessage.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

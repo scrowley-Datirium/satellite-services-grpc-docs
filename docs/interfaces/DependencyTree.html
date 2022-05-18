@@ -47,7 +47,7 @@
   <li>Interfaces</li>
   <li
   >
-  SatelliteJWT</li>
+  DependencyTree</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/interfaces/satellite.interface.ts</code>
+            <code>src/interfaces/apiSync.interface.ts</code>
         </p>
 
 
@@ -81,33 +81,57 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#aud" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#apimachine" 
 >
-                                            aud
+                                            apimachine
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#exp" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#busresponse" 
 >
-                                            exp
+                                            busresponse
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#iat" 
+                                        <a href="#children" 
 >
-                                            iat
+                                            children
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#sub" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#errorresponse" 
 >
-                                            sub
+                                            errorresponse
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#userId" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#onlymachine" 
 >
-                                            userId
+                                            onlymachine
+                                        </a>
+                                </li>
+                                <li>
+                                        <a href="#options" 
+>
+                                            options
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#outresponse" 
+>
+                                            outresponse
+                                        </a>
+                                </li>
+                                <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#statemachine" 
+>
+                                            statemachine
                                         </a>
                                 </li>
                             </ul>
@@ -125,9 +149,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="aud"></a>
-                                        <span class="name "><b>aud</b>
-                                            <a href="#aud">
+                                        <a name="apimachine"></a>
+                                        <span class="name "><b>apimachine</b>
+                                            <a href="#apimachine">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -135,7 +159,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>aud:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>apimachine:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -148,52 +172,24 @@
                                         </td>
                                     </tr>
 
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="exp"></a>
-                                        <span class="name "><b>exp</b>
-                                            <a href="#exp">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>exp:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
 
 
 
 
-
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="iat"></a>
-                                        <span class="name "><b>iat</b>
-                                            <a href="#iat">
+                                        <a name="busresponse"></a>
+                                        <span class="name "><b>busresponse</b>
+                                            <a href="#busresponse">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -201,40 +197,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>iat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="sub"></a>
-                                        <span class="name "><b>sub</b>
-                                            <a href="#sub">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>sub:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>busresponse:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -247,6 +210,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -257,9 +225,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="userId"></a>
-                                        <span class="name "><b>userId</b>
-                                            <a href="#userId">
+                                        <a name="children"></a>
+                                        <span class="name "><b>children</b>
+                                            <a href="#children">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -267,7 +235,40 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>userId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>children:         <code><a href="../interfaces/DependencyTree.html" target="_self" >DependencyTree[]</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/DependencyTree.html" target="_self" >DependencyTree[]</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="errorresponse"></a>
+                                        <span class="name "><b>errorresponse</b>
+                                            <a href="#errorresponse">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>errorresponse:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -280,6 +281,158 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="onlymachine"></a>
+                                        <span class="name "><b>onlymachine</b>
+                                            <a href="#onlymachine">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>onlymachine:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="options"></a>
+                                        <span class="name "><b>options</b>
+                                            <a href="#options">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>options:         <code><a href="../interfaces/CustomPm2StartOptions.html" target="_self" >CustomPm2StartOptions</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/CustomPm2StartOptions.html" target="_self" >CustomPm2StartOptions</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="outresponse"></a>
+                                        <span class="name "><b>outresponse</b>
+                                            <a href="#outresponse">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>outresponse:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="statemachine"></a>
+                                        <span class="name "><b>statemachine</b>
+                                            <a href="#statemachine">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>statemachine:         <code><a href="../interfaces/UnProcessedStateMachineOptions.html" target="_self" >UnProcessedStateMachineOptions</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="../interfaces/UnProcessedStateMachineOptions.html" target="_self" >UnProcessedStateMachineOptions</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -325,7 +478,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'SatelliteJWT.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DependencyTree.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

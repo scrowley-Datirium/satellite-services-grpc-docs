@@ -47,7 +47,7 @@
   <li>Interfaces</li>
   <li
   >
-  SatelliteJWT</li>
+  StateOptions</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -62,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/interfaces/satellite.interface.ts</code>
+            <code>src/interfaces/apiSync.interface.ts</code>
         </p>
 
 
@@ -81,33 +81,31 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#aud" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#entry" 
 >
-                                            aud
+                                            entry
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#exp" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#exit" 
 >
-                                            exp
+                                            exit
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#iat" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#on" 
 >
-                                            iat
+                                            on
                                         </a>
                                 </li>
                                 <li>
-                                        <a href="#sub" 
+                                            <span class="modifier">Optional</span>
+                                        <a href="#overwrite" 
 >
-                                            sub
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="#userId" 
->
-                                            userId
+                                            overwrite
                                         </a>
                                 </li>
                             </ul>
@@ -125,9 +123,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="aud"></a>
-                                        <span class="name "><b>aud</b>
-                                            <a href="#aud">
+                                        <a name="entry"></a>
+                                        <span class="name "><b>entry</b>
+                                            <a href="#entry">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -135,7 +133,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>aud:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>entry:     <code>string[]</code>
 </code>
                                     </td>
                                 </tr>
@@ -143,11 +141,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>    <code>string[]</code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -158,9 +161,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="exp"></a>
-                                        <span class="name "><b>exp</b>
-                                            <a href="#exp">
+                                        <a name="exit"></a>
+                                        <span class="name "><b>exit</b>
+                                            <a href="#exit">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -168,7 +171,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>exp:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>exit:     <code>string[]</code>
 </code>
                                     </td>
                                 </tr>
@@ -176,11 +179,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>    <code>string[]</code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -191,9 +199,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="iat"></a>
-                                        <span class="name "><b>iat</b>
-                                            <a href="#iat">
+                                        <a name="on"></a>
+                                        <span class="name "><b>on</b>
+                                            <a href="#on">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -201,7 +209,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>iat:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>on:     <code>literal type</code>
 </code>
                                     </td>
                                 </tr>
@@ -209,11 +217,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>    <code>literal type</code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -224,9 +237,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="sub"></a>
-                                        <span class="name "><b>sub</b>
-                                            <a href="#sub">
+                                        <a name="overwrite"></a>
+                                        <span class="name "><b>overwrite</b>
+                                            <a href="#overwrite">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -234,7 +247,7 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>sub:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>overwrite:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -242,44 +255,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 
                                         </td>
                                     </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="userId"></a>
-                                        <span class="name "><b>userId</b>
-                                            <a href="#userId">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>userId:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
-
 
 
 
@@ -325,7 +310,7 @@
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'SatelliteJWT.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'StateOptions.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

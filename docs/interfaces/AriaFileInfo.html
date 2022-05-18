@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>file-manager-service documentation</title>
+        <title>scidap-satellite documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">file-manager-service documentation</a>
+            <a href="../" class="navbar-brand">scidap-satellite documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -53,9 +53,6 @@
 <ul class="nav nav-tabs" role="tablist">
         <li class="active">
             <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-        </li>
-        <li >
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
         </li>
 </ul>
 
@@ -176,130 +173,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { UrlWithStringQuery } from &#x27;url&#x27;;
-
-export interface ProcessedData {
-    cwlFile?: string;
-    sample?: any;
-    taskId: string;
-    dagId?: string;
-    downloads?: any[];
-}
-
-export interface BaseModuleInterface {
-    getInfo(): {
-        moduleId: string;
-        caption: string;
-        type: string;
-    };
-
-    getFile(fileUrl: UrlWithStringQuery, userId?: string, sampleId?: string): FileData;
-}
-
-export interface Info {
-    moduleId: string;
-    caption?: string;
-    type?: string;
-    mainUrl?: string;
-    loginUrl?: string;
-    viewListUrl?: string;
-    downloadUrl?: string;
-    private_key?: string;
-    private_iv?: string;
-    encryptKey?: string;
-    token?: string;
-    protocol?: string;
-    collection?: any;
-    publication?: string;
-    refreshSessionInterval?: number;
-}
-
-export interface FileData {
-    url: string;
-    basename: string;
-    header: string;
-}
-
-export interface DownloadObject {
-    uri: string;
-    path: string;
-    header: string;
-    sampleId: string;
-    projectId: string;
-    userId: string;
-    fileId: string;
-    inputKey?: string;
-    token: string;
-    downloaded: boolean;
-    taskId: string;
-    fileName: string;
-    gid?: string;
-}
-
-export interface AriaDownloadObject extends DownloadObject {
-    gid: string;
-}
-
-export interface DownloadResults {
-    status: string;
-    fileId?: string;
-    taskId?: string;
-    progress?: string;
-    error?: boolean;
-    path?: string;
-    size?: number;
-    message?: string;
-    sampleId?: string;
-}
-
-export interface Aria2cProgressReport {
-    status: string;
-    completedLength: number;
-    totalLength: number;
-    files: AriaFileInfo[];
-}
-
-export interface MergedDownloadObject {
-    aria2: Aria2cProgressReport;
-    data: AriaDownloadObject;
-}
-
-export interface AriaFileInfo {
-    path: string;
-    uris: {
-        uri: string;
-    }[];
-}
-export interface AirflowReportToAPI {
-    state: string;
-    dagId: string;
-    runId: string;
-    progress: number;
-    error: string;
-}
-
-export interface AirflowSuccessToAPI {
-    dagId: string;
-    runId: string;
-    progress: number;
-    results: any;
-}
-
-export interface SatelliteJWT {
-    userId: string;
-    iat: number; //in seconds
-    exp: number; //in seconds
-    aud: string; //satellite id
-    sub: string; //satellite
-}
-
-export interface DownloadFailed {
-    message: string;
-    sampleId: string;
-    taskId: string;
-}</code></pre>
-    </div>
 </div>
 
 
