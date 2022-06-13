@@ -191,6 +191,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>airflowProgress action type indicates that the logs/stored data is related to the progress of the analysis run</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -217,6 +223,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>airflowStatistics action type indicates that the logs/stored data are related to the analyses run</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -243,6 +255,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>airflowSuccess action type indicates that the sample hsa finished it&#39;s analysis</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -295,6 +313,13 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Action types are the names of action
+Each action correlates to a either an action taken by a specific state, or by a state&#39;s transition</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -321,6 +346,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>error action state indicates that the machine running failed on some process</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -347,6 +378,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>finished action type indicates that a download has finished</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -373,6 +410,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>getTask action state indicates that the machine this state is active on has tasks to run. these tasks come from api-sync&#39;s task-queue-machine</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -425,6 +468,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>processing indicates that a sample is running (either by airflow, cwltool, cwltoil, ...)</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -477,6 +526,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>visualPlugin action type indicates that stores logs/data are related to data visualization</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -503,33 +558,57 @@
                 <tr>
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
+    /** Name of state machine */
     id: &#x27;fakeName&#x27;,
+
+    /** initial state of state machine */
     initial: &#x27;offline&#x27;,
+
+    /** all states this fsm can assume */
     states: {
+        /** define what happens when fsm is &#x27;offline&#x27; (define transitions out of this state) */
         offline: {
+            /** transition rules for state machine */
             on: {
+                /** when this fsm receives signal that it&#x27;s parent is online, transition to state &#x27;ready&#x27; */
                 PARENT_ONLINE: { target: &#x27;ready&#x27; },
+
+                /** when this fsm receives signal that it has successfully started, transition to &#x27;online&#x27; */
                 STARTED: { target: &#x27;online&#x27;, cond: &#x27;notChild&#x27; },
             },
         },
+        /** define what happens when fsm is in &#x27;ready&#x27; state. (define transitions out of, as into this state) */
         ready: {
+            /** define what event triggers what */
             on: {
+                /** when in &#x27;ready&#x27; state, if &#x27;online&#x27; event received, transition to &#x27;online&#x27; */
                 STARTED: { target: &#x27;online&#x27; },
             },
         },
+        /** define what happens in &#x27;online&#x27; state */
         online: {
+            /** when this state is entered, run &#x27;sendReadyToChild&#x27; action. (refers to fsm&#x27;s actions) */
             entry: [&#x27;sendReadyToChild&#x27;],
+            /** when this state is left, run &#x27;sendStopToChild&#x27; action. (refers to fsm&#x27;s actions) */
             exit: [&#x27;sendStopToChild&#x27;],
         },
+        /** defines how &#x27;restarting&#x27; state works */
         restarting: {
+            /** define actions taken for state */
             on: {
+                /** when &#x27;started&#x27; even recieved, transition to &#x27;online&#x27; state */
                 STARTED: { target: &#x27;online&#x27; },
             },
         },
+        /** define error state */
         error: {
+            /** when fms enters &#x27;error&#x27; state, run &#x27;sendStopToChild&#x27; action */
             entry: [&#x27;sendStopToChild&#x27;],
+            /** define state transitions */
             on: {
+                /** if parent online, transtition to &#x27;ready&#x27; state */
                 PARENT_ONLINE: { target: &#x27;ready&#x27; },
+                /** if fsm started, transition to &#x27;online&#x27; state (so long as the &#x27;notChild&#x27; guard passes) */
                 STARTED: { target: &#x27;online&#x27;, cond: &#x27;notChild&#x27; },
             },
         },
@@ -578,6 +657,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>downloading taskType  indicates a sample needs to have it&#39;s inputs downloaded before having its analysis run</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -604,6 +689,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>finishedDownloading taskType indicates that a download has finished. transitions into &#39;processing&#39;</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -630,6 +721,13 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>TaskTypes are what kind of tasks is given to the satellite from task-queue-machine
+Tasks are related to sample downloads/analysis runs</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -656,6 +754,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>processing taskType indicates that an anlysis is running (using cwltool, airflow, ...)</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -682,6 +786,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>rerunSample taskType indicates that a sample&#39;s analysis is to be rerun (using cwltool, airflow, ...). Transition to &#39;processing&#39;</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -708,6 +818,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>updatedSample taskType indicates that a sample&#39;s inputs/preview/ something has been updated. checks if downloading is necessary before checking if rerunning is necessary</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
