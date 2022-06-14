@@ -92,7 +92,7 @@
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
-                                <a href="#_runningServices" >_runningServices</a>
+                                <a href="#_runningServices" class="deprecated-name">_runningServices</a>
                             </li>
                             <li>
                                     <span class="modifier">Private</span>
@@ -230,6 +230,8 @@
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Configure the satellite then</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -412,6 +414,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Closes a stream and removes pm2 process that was handling the stream as well as logs from that process</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -422,6 +426,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -436,6 +441,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>where logs for pm2 process are stored</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>pmId</td>
@@ -448,6 +457,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>process id</p>
+
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>task</td>
@@ -460,6 +473,8 @@
                                     </td>
 
 
+                                    <td>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -669,10 +684,17 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Get stream connection to api-sync from &#39;commandStream&#39;.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>literal type</code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -1005,6 +1027,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>set to true when satellite connects with api-sync. set to false when disconnected</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1032,6 +1060,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>All of the Machines that are currently running</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1042,9 +1076,14 @@
                     <a name="_runningServices"></a>
                     <span class="name">
                             <span class="modifier">Private</span>
-                        <span ><b>_runningServices</b></span>
+                        <span class="deprecated-name"><b>_runningServices</b></span>
                         <a href="#_runningServices"><span class="icon ion-ios-link"></span></a>
                     </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4 deprecated">
+                    Not used
                 </td>
             </tr>
                 <tr>
@@ -1059,6 +1098,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds any Service that was running through pm2 before Satellite Startup</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1146,6 +1191,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Holds all of the stream response references</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1222,6 +1273,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>All of the Dependency trees we have been sent</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1333,6 +1390,17 @@
                         <span class="accessor"><b>get</b><code>machines()</code></span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get all of the Machines that are currently running</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>literal type</code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>
@@ -1350,6 +1418,17 @@
                         <span class="accessor"><b>get</b><code>trees()</code></span>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Get all of the Dependency trees we have been sent</p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code>literal type</code>
+
+                                </div>
+                        </td>
+                    </tr>
 
             </tbody>
         </table>

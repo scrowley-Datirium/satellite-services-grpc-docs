@@ -112,10 +112,10 @@
                             <a href="#pm2" title="src/app.service.ts" ><b>pm2</b>&nbsp;&nbsp;&nbsp;(src/.../app.service.ts)</a>
                         </li>
                         <li>
-                            <a href="#pm2" title="src/stateMachines/stateMachines.service.ts" ><b>pm2</b>&nbsp;&nbsp;&nbsp;(src/.../stateMachines.service.ts)</a>
+                            <a href="#pm2" title="src/pm2/pm2.service.ts" ><b>pm2</b>&nbsp;&nbsp;&nbsp;(src/.../pm2.service.ts)</a>
                         </li>
                         <li>
-                            <a href="#pm2" title="src/pm2/pm2.service.ts" ><b>pm2</b>&nbsp;&nbsp;&nbsp;(src/.../pm2.service.ts)</a>
+                            <a href="#pm2" title="src/stateMachines/stateMachines.service.ts" ><b>pm2</b>&nbsp;&nbsp;&nbsp;(src/.../stateMachines.service.ts)</a>
                         </li>
                         <li>
                             <a href="#pm2MonitorTimer" title="src/app.service.ts" ><b>pm2MonitorTimer</b>&nbsp;&nbsp;&nbsp;(src/.../app.service.ts)</a>
@@ -613,9 +613,13 @@ Each action correlates to a either an action taken by a specific state, or by a 
             },
         },
     },
+    /** defines events the state-machine handles and what state they trigger */
     on: {
+        /** ERROR event triggers state-machine to transition to &#x27;error&#x27; state */
         ERROR: { target: &#x27;error&#x27; },
+        /** RESTART event triggers state-machine to transition to &#x27;restarting&#x27; state */
         RESTART: { target: &#x27;restarting&#x27; },
+        /** STOPPED event triggers state-machine to transition to &#x27;offline&#x27; state */
         STOPPED: { target: &#x27;offline&#x27; },
     },
 }</code>
@@ -1148,7 +1152,7 @@ Tasks are related to sample downloads/analysis runs</p>
         </tbody>
     </table>
 </section>
-    <h3>src/stateMachines/stateMachines.service.ts</h3>
+    <h3>src/pm2/pm2.service.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -1171,7 +1175,7 @@ Tasks are related to sample downloads/analysis runs</p>
         </tbody>
     </table>
 </section>
-    <h3>src/pm2/pm2.service.ts</h3>
+    <h3>src/stateMachines/stateMachines.service.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
