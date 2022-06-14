@@ -138,7 +138,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/AirflowReportToAPI.html" data-type="entity-link" >AirflowReportToAPI</a>
+                                <a href="interfaces/AirflowReportToAPI.html" data-type="entity-link" class="deprecated-name">AirflowReportToAPI</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/AirflowSuccessToAPI.html" data-type="entity-link" >AirflowSuccessToAPI</a>
