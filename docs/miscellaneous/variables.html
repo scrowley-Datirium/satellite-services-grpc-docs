@@ -570,10 +570,10 @@ Each action correlates to a either an action taken by a specific state, or by a 
         offline: {
             /** transition rules for state machine */
             on: {
-                /** when this fsm receives signal that it&#x27;s parent is online, transition to state &#x27;ready&#x27; */
+                /** when this state receives PARENT_ONLINE event, transition to state &#x27;ready&#x27; */
                 PARENT_ONLINE: { target: &#x27;ready&#x27; },
 
-                /** when this fsm receives signal that it has successfully started, transition to &#x27;online&#x27; */
+                /** when this state receives STARTED event, transition to &#x27;online&#x27; if the guard &#x27;notChild&#x27; passes */
                 STARTED: { target: &#x27;online&#x27;, cond: &#x27;notChild&#x27; },
             },
         },
@@ -581,22 +581,22 @@ Each action correlates to a either an action taken by a specific state, or by a 
         ready: {
             /** define what event triggers what */
             on: {
-                /** when in &#x27;ready&#x27; state, if &#x27;online&#x27; event received, transition to &#x27;online&#x27; */
+                /** if STARTED event received, transition to &#x27;online&#x27; */
                 STARTED: { target: &#x27;online&#x27; },
             },
         },
         /** define what happens in &#x27;online&#x27; state */
         online: {
-            /** when this state is entered, run &#x27;sendReadyToChild&#x27; action. (refers to fsm&#x27;s actions) */
+            /** when this state is entered, run &#x27;sendReadyToChild&#x27; action. (refers to fsm&#x27;s options.actions) */
             entry: [&#x27;sendReadyToChild&#x27;],
-            /** when this state is left, run &#x27;sendStopToChild&#x27; action. (refers to fsm&#x27;s actions) */
+            /** when this state is left, run &#x27;sendStopToChild&#x27; action. (refers to fsm&#x27;s options.actions) */
             exit: [&#x27;sendStopToChild&#x27;],
         },
-        /** defines how &#x27;restarting&#x27; state works */
+        /** defines &#x27;restarting&#x27; state */
         restarting: {
             /** define actions taken for state */
             on: {
-                /** when &#x27;started&#x27; even recieved, transition to &#x27;online&#x27; state */
+                /** when &#x27;started&#x27; event recieved, transition to &#x27;online&#x27; state */
                 STARTED: { target: &#x27;online&#x27; },
             },
         },
@@ -606,14 +606,14 @@ Each action correlates to a either an action taken by a specific state, or by a 
             entry: [&#x27;sendStopToChild&#x27;],
             /** define state transitions */
             on: {
-                /** if parent online, transtition to &#x27;ready&#x27; state */
+                /** if Parent_online event recieved, transtition to &#x27;ready&#x27; state */
                 PARENT_ONLINE: { target: &#x27;ready&#x27; },
-                /** if fsm started, transition to &#x27;online&#x27; state (so long as the &#x27;notChild&#x27; guard passes) */
+                /** if STARTED event recieved, transition to &#x27;online&#x27; state if &#x27;notChild&#x27; guard passes */
                 STARTED: { target: &#x27;online&#x27;, cond: &#x27;notChild&#x27; },
             },
         },
     },
-    /** defines events the state-machine handles and what state they trigger */
+    /** defines events the state-machine (as a whole) handles and what state they trigger */
     on: {
         /** ERROR event triggers state-machine to transition to &#x27;error&#x27; state */
         ERROR: { target: &#x27;error&#x27; },
