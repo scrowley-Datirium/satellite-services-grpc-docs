@@ -230,7 +230,8 @@
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Configure the satellite then</p>
+                            <div class="io-description"><p>Configure the satellite</p>
+<p>Setup stateMachineServices sendEvent observable to filter events for machines this satellite has</p>
 </div>
                             <div>
                                     <b>Parameters :</b>
@@ -240,6 +241,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -254,6 +256,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>api sync connection service</p>
+
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>authService</td>
@@ -266,6 +272,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>_configService</td>
@@ -278,6 +286,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>stateMachineService</td>
@@ -290,6 +300,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>_treeService</td>
@@ -302,6 +314,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>_taskService</td>
@@ -314,6 +328,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>_commandService</td>
@@ -326,6 +342,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                         <td>_pm2Service</td>
@@ -338,6 +356,8 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -378,7 +398,10 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Checks PM2 list periodically for any services that are errored or stopped</p>
+                    <div class="io-description"><p>Check pm2 list for TASKS that are error&#39;d or stopped</p>
+<p>If stopped or error&#39;d send message to api-sync</p>
+<p>Check pm2 list for SERVICES (file-manager) that are error&#39;d or stopped</p>
+<p>If SERVICE is stopped or error&#39;d send ERROR event to that services state-machine (on this satellite)</p>
 </div>
 
                     <div class="io-description">
@@ -507,7 +530,7 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>_createStateMachines(tree: <a href="../interfaces/ProcessedTree.html" target="_self">ProcessedTree</a>, child)</code>
+                    <code>_createStateMachines(tree: <a href="../interfaces/ProcessedTree.html" target="_self">ProcessedTree</a>, child: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
                 </td>
             </tr>
 
@@ -516,7 +539,10 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Generates a FSM for current tree node and all children recursively</p>
+                    <div class="io-description"><p>-Generates a FSM for current tree node and its children (recursively)</p>
+<p>-Create children first</p>
+<p>-Check that scripts are accessable within scidap_home</p>
+<p>-Catch any failed machine creations so entire tree isn&#39;t corrupted</p>
 </div>
 
                     <div class="io-description">
@@ -554,6 +580,7 @@
                                 <tr>
                                     <td>child</td>
                                     <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
                                     </td>
 
                                     <td>
@@ -611,7 +638,11 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Build and start the Root node of a Dependency Tree</p>
+                    <div class="io-description"><p>-Build and start the Root node of a Dependency Tree</p>
+<p>-Creates machine with all children nested</p>
+<p>-Interprets machine then starts it</p>
+<p>-Sets up transition logic (for commands)</p>
+<p>-Start services in tree (recursively)</p>
 </div>
 
                     <div class="io-description">
@@ -653,7 +684,7 @@
 
                     </div>
                     <div class="io-description">
-                        <p>boolean based on succes starting</p>
+                        <p>based on successful starting of initial machines</p>
 
                     </div>
                 </td>
@@ -724,8 +755,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Opens the connection to API-Sync and embeds Satellite token into metadata
- Also responsible for setting up subscription that handles trees and tasks</p>
+                    <div class="io-description"><p>This method is essentially the handshake between satellite and api-sync</p>
+<p>-Embeds satellite token into metadata (gotten by config service from grpc-service&#39;s settings.yml).</p>
+<p>-Opens connection to api-sync</p>
+<p>-Continually overwrites this satellites ID (gotten from api-sync so should always be the same unless new satellite made off of already existing machine)</p>
+<p>-If error in connecting, retry every 5 seconds</p>
+<p>-Added functionality for if connection is broken by api-sync (not implemented or in use)</p>
+<p>-Send message to api-sync that connection was successful</p>
+<p>-Start countdown for disconnecting (if keepAlivePing not received)</p>
+<p>-Send keepAlivePing every interval @var {pingTimer}</p>
 </div>
 
                     <div class="io-description">
@@ -762,6 +800,10 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>Handles General Logic for messages from API-Sync</p>
+<p>-Processes if messages were sent while the connection was down</p>
+<p>-Starts each root state-machine one at a time</p>
+<p>-Handles tasks for &quot;main_service&quot; (&#39;target&#39; of task that is to be generated as pm2 process)</p>
+<p>-Handles tasks for other services (tasks given to a state machine that exists) (like file-manager, or a &#39;command&#39; from front-end)</p>
 </div>
 
                     <div class="io-description">
@@ -833,6 +875,13 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>kill allpm2 instance with this satellites namespace</p>
+<p>validate temp folder (for scripts) exists. make if it doesn&#39;t</p>
+<p>Start listening to the pm2 bus so that we can get messages from the Satellite Services
+Currently we don&#39;t have anything that communicates on this protocol
+We will want to expand this when we write the handler services, since they can take advantage
+ of the more explict RPC connection that is used here instead of just writing to stdout</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
@@ -864,7 +913,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>This function runs a timer that if it isn&#39;t called in that time it breaks the connection and restarts it</p>
+                    <div class="io-description"><p>Clear keepAliveTime so on next timeout, another ping is sent to api-sync</p>
+<p>If no ping received from api-sync (after timeout and ping sent), kill the timer and set connection to false</p>
 </div>
 
                     <div class="io-description">
@@ -899,7 +949,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Send a message to API-Sync</p>
+                    <div class="io-description"><p>-Send a message to API-Sync via streamQueue</p>
+<p>-If disconnected, save message so it can be sent once connection is re-established</p>
 </div>
 
                     <div class="io-description">
@@ -1083,7 +1134,7 @@
             </tr>
             <tr>
                 <td class="col-md-4 deprecated">
-                    Not used
+                    Not used ?
                 </td>
             </tr>
                 <tr>
@@ -1131,6 +1182,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>messages that are sent while satellite is disconnected (saved to be sent once reconnected)</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1301,6 +1358,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>how long to wait until a keepAlive ping is sent to api-sync</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1323,6 +1386,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>how long satellite can be inactive before disconnecting</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1345,6 +1414,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>namespace of satellite?</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>
@@ -1367,6 +1442,12 @@
                     </td>
                 </tr>
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>id of this satellite</p>
+</div>
+                </td>
+            </tr>
 
         </tbody>
     </table>

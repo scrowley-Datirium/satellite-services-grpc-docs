@@ -157,7 +157,8 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>actions that are run by this event (before transitioning states?)</p>
+                                    <div class="io-description"><p>list actions that are run by this event (before transitioning states?)</p>
+<p>actions are run in the order listed, asynchronous functions do not block later functions</p>
 </div>
                                 </td>
                             </tr>
@@ -201,7 +202,8 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>references to option actions for conditions that need to pass for this event to transition to the next state</p>
+                                    <div class="io-description"><p>refers to options.guards for conditions that need to pass</p>
+<p>passed condition allow this event to trigger its state transition (target) or actions (depends on which are given)</p>
 </div>
                                 </td>
                             </tr>
@@ -245,7 +247,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>what state this event triggers</p>
+                                    <div class="io-description"><p>reference to the state this event causes a transition into</p>
 </div>
                                 </td>
                             </tr>

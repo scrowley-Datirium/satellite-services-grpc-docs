@@ -70,7 +70,7 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Options (enviroment) for an entire state machine</p>
+                <p>Options (environment) for an entire state machine</p>
 
             </p>
 
@@ -162,6 +162,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>actions are functions that are globally available to a state machine. Can be triggered by events or states (part of state-machine options)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -200,6 +206,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>guards are boolean returning functions used to validate the use of actions (part of state-machine options)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -240,7 +252,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>interface representing a s</p>
+                                    <div class="io-description"><p>events (and actions/transitions triggered by them) that a state-machine has</p>
 </div>
                                 </td>
                             </tr>
@@ -284,7 +296,7 @@
 
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-description"><p>States (and their transitions) that a state-machine has</p>
+                                    <div class="io-description"><p>All states (and what actions they trigger / states they transition to) that a state-machine has</p>
 </div>
                                 </td>
                             </tr>
