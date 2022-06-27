@@ -66,6 +66,13 @@
         </p>
 
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>interface representing a new state-machine that this satellite should create (gotten from api-sync)</p>
+
+            </p>
 
 
         <section>
@@ -252,6 +259,16 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>list of state-machine that exist as children for this state-machine</p>
+<p>they are of type dependencyTree and not just unprocessedStateMachine because
+ each state machine has it&#39;s own set of options localized to that state machine,
+ as well as a busresponse for the observable instance of this tree to sync responses
+ from state-machines to api-sync reference of that statemachine</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -290,6 +307,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>for storing error outputs for the state-machine</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -361,6 +384,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>pm2 options that this state-machine uses when creating pm2 processed for tasks</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -399,6 +428,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>for storing the a state-machines output (generally gotten from task outputs)</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <table class="table table-sm table-bordered">
@@ -437,6 +472,12 @@
 
 
 
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>the state machine to be created</p>
+</div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
             </section>
